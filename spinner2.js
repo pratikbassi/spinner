@@ -18,3 +18,12 @@ process.stdout.write('hello from spinner1.js... \rheyyy\n');
   }, 900)
 
 
+let time = 100
+let array = [`\r|`, `\r/`, `\r-`, `\r\\`, `\r|`];
+
+for(let item in array){
+  setTimeout(() => {
+    process.stdout.write(array[item] + '    ')
+  }, time)
+  time = time + 200;
+}
